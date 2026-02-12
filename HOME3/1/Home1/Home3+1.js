@@ -34,6 +34,7 @@ while(j<arrFive.length){
     j+=2;
 }
 
+
 for(let i=1; i<arrFive.length; i+=2){
     console.log(arrFive[i]);
 }
