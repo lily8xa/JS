@@ -40,6 +40,7 @@ for(let i=1; i<arrFive.length; i+=2){
 }
 console.log(`5parni`);
 
+
 let f=0
 while(f<arrFive.length) {
     if (arrFive [f] %2===0)
