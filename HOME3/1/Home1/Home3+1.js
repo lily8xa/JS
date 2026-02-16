@@ -9,10 +9,13 @@ console.log(ArrSecond)
 let ArrThird=[`I`,`Love`,`you`,100,true]
 console.log(ArrThird)
 
-let ArrFour=[`I`,`Love`,`You`,`love`,`me`,true]
-console.log(ArrFour[2])
-console.log(ArrFour[1])
-console.log(ArrFour[4])
+let arrFour=[]
+arrFour[0]=`I`;
+arrFour[1]=`Love`;
+arrFour[2]=`you`;
+arrFour[3]=`Baby,`;
+arrFour[4]=`Really`;
+console.log(arrFour)
 
 
 
@@ -116,3 +119,4 @@ for(let i=arrSet.length-1; i>=0; i--){
     }
 }
 console.log(arrSet);
+
