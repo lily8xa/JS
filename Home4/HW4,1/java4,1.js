@@ -141,23 +141,23 @@ console.log(swap([11,22,33,44],1,0));
  // Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 //
 // Приклад exchange(10000,[{currency:’USD’,value:25},{currency:’EUR’,value:42}],’USD’) // => 400
-
-function exchange(sumUAH,currencyValues ,exchangeCurrency){
-
-for (let i=0; i<currencyValues.length; i++){
-    if(currencyValues[i].currency===exchangeCurrency){
-
-        return sumUAH/currencyValues[i].value
-
-    }
-    // else if(currencyValues[i].currency!==exchangeCurrency){   //Я хотіла у випадку неправильного вводу вивести повідомлення.
-    //    console.log(`Error`);
-    // }
-}
-
-}
- // exchange(10000,[{currency:`’USD’`,value:25},{currency:`’EUR’`,value:42}],)
-console.log (exchange(10000,[{currency:`USD`,value:25},{currency:`EUR`,value:42}],`EUR`))
+//
+// function exchange(sumUAH,currencyValues ,exchangeCurrency){
+//
+// for (let i=0; i<currencyValues.length; i++){
+//     if(currencyValues[i].currency===exchangeCurrency){
+//
+//         return sumUAH/currencyValues[i].value
+//
+//     }
+//     // else if(currencyValues[i].currency!==exchangeCurrency){   //Я хотіла у випадку неправильного вводу вивести повідомлення.
+//     //    console.log(`Error`);
+//     // }
+// }
+//
+// }
+//  // exchange(10000,[{currency:`’USD’`,value:25},{currency:`’EUR’`,value:42}],)
+// console.log (exchange(10000,[{currency:`USD`,value:25},{currency:`EUR`,value:42}],`EUR`))
 
 //– створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах
 //
@@ -188,7 +188,9 @@ function exchange(sumUAH,currencyValues ,exchangeCurrency){
 const currencyBase=['USD','EUR','GBP']
     if(chekCurrency(currencyBase,currencyValues[0].currency)
         && chekCurrency(currencyBase,currencyValues[1].currency)
-        && chekCurrency(currencyBase,currencyValues[2].currency)){
+        && chekCurrency(currencyBase,currencyValues[2].currency)
+        && chekCurrency(currencyBase,exchangeCurrency)
+    ){
 
                     for (let i=0; i<currencyValues.length; i++){
                         if(currencyValues[i].currency===exchangeCurrency){
