@@ -80,10 +80,13 @@ console.log(read);
 let ollDia=cardArray.filter(cardArray=>cardArray.cardSuit==='diamond');
 console.log(ollDia)
 
-let minValue=cardArray.sort((a,b)=>a.value-b.value);
-// console.log(minValue);
+const valueHi=[7,6,8,9,10,11,'Jack','Queen','King','Ace'];
 
-let moreSpade=cardArray.filter(cardArray=>cardArray.cardSuit==='spade'&& minValue>=9 );/////я здаюсь
+
+let minValue=valueHi.sort((a,b)=> a-b);
+console.log(minValue);
+
+let moreSpade=cardArray.filter(cardArray=>cardArray.cardSuit==='spade'&& minValue.includes()[3] );/////я здаюсь
 
 
 
