@@ -1,0 +1,16 @@
+.wrap{
+    height: 100px;
+}
+.alpha{
+    width: 100px;
+}
+.beta{
+    background: purple;
+}
+.collapse{
+    margin: 20px;
+}
+.text-style{
+    color: #222243;
+    font-size: large;
+}
