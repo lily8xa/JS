@@ -26,4 +26,5 @@ let prev=document.getElementById('prev')
 next.onclick=function (){
     console.log(objects[0])
 }
+
 console.log(objects)
