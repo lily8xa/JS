@@ -14,17 +14,41 @@ let objects=[];
 for(let i=0; i<100;i++) {
     objects.push({id: i + 1, name: 'ObjectSuper'})
 }
+let list=document.getElementById('list');
+let next=document.getElementById('next');
+let prev=document.getElementById('prev');
 
-for(let object of objects){
-    const li=document.createElement('li')
-    li.innerText=object.id +'  '+ object.name;
-let list=document.getElementById('list')
-list.appendChild(li)
+let currentPage=0;
+const itemsPerPage=10;
+
+function render(){
+    list.innerHTML=``;
+
+    let start=currentPage*itemsPerPage;
+    let end=start+itemsPerPage;
+    const itemsToShow=objects.slice(start,end);
+    itemsToShow.forEach(object=>{
+        const li=document.createElement("li");
+        li.innerText=`${object.id} ${object.name}`
+        list.appendChild(li);
+    })
+    prev.disabled =currentPage===0;
+    next.disabled=end >= objects.length;
+
 }
-let next=document.getElementById('next')
-let prev=document.getElementById('prev')
 next.onclick=function (){
-    console.log(objects[0])
+    if((currentPage+1)*itemsPerPage<objects.length){
+        currentPage++;
+        render();
+    }
 }
+prev.onclick=function (){
+    if(currentPage>0){
+        currentPage--;
+        render();
+    }
+}
+
+render();
 
 console.log(objects)

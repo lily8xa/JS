@@ -1,0 +1,12 @@
+p{
+    background: rgba(255, 99, 255, 0.66);
+}
+li{
+    background: rgba(255, 99, 135, 0.66);
+}
+.cart-container{
+    background: rgba(133, 133, 239, 0.62);
+}
+#carts{
+    background: rgb(13, 13, 50);
+}
